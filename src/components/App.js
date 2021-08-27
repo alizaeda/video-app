@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import youtube from '../API/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import { debounce } from 'throttle-debounce';
 
 class App extends Component {
   state = {
@@ -12,7 +13,7 @@ class App extends Component {
   componentDidMount() {
     this.onFormSubmit('React');
   }
-  onFormSubmit = async term => {
+  onFormSubmit = debounce(300, false, async term => {
     const response = await youtube.get('/search', {
       params: {
         q: term,
@@ -22,7 +23,8 @@ class App extends Component {
       videos: response.data.items,
       selectedVideo: response.data.items[0],
     });
-  };
+  });
+
   isArrayEmpty = () => {
     const { videos } = this.state;
     if (videos.length > 0) {
