@@ -1,6 +1,7 @@
 # Project
 
-This was a small React Search Application Using Youtube API for Search Results [Modern React | Stephen Grider Udemy Course]
+This was a small React Search Application Using Youtube API for Search Results <br/>
+[Modern React | Stephen Grider Udemy Course]
 Max Results was 5.. with a simple ui design to show video and sidebar for youtube suggested videos for Search term
 
 # Getting Started with Create React App
