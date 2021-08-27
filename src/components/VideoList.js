@@ -8,7 +8,7 @@ const VideoList = ({ videos, onVideoSelect }) => {
         return (
           <VideoItem
             onVideoSelect={onVideoSelect}
-            key={video.id.videoId}
+            key={video.snippet.title}
             video={video}
           />
         );
