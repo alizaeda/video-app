@@ -1,8 +1,13 @@
 import React from 'react';
+import './VideoDetail.css';
 
-const VideoDetail = ({video}) => {
+const VideoDetail = ({ video }) => {
   if (!video) {
-    return "Loading..";
+    return (
+      <div class="lds-circle">
+        <div>Loading</div>
+      </div>
+    );
   }
   const videoSrc = `http://www.youtube.com/embed/${video.id.videoId}`;
   return (
@@ -14,8 +19,8 @@ const VideoDetail = ({video}) => {
         <h4 className="ui header">{video.snippet.title}</h4>
         <p className="ui description">{video.snippet.description}</p>
       </div>
-  </div>
-  )
-}
+    </div>
+  );
+};
 
 export default VideoDetail;
