@@ -1,4 +1,4 @@
-# Project
+# Project Overview
 
 This was a small React Search Application Using Youtube API for Search Results <br/>
 [Modern React | Stephen Grider Udemy Course]
